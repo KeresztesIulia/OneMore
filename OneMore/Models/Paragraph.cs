@@ -9,6 +9,8 @@ namespace River.OneMoreAddIn.Models
 
 	internal class Paragraph : XElement
 	{
+		XNamespace ns;
+
 		public Paragraph(string text)
 			: this(PageNamespace.Value, text)
 		{
@@ -30,6 +32,7 @@ namespace River.OneMoreAddIn.Models
 		public Paragraph(XNamespace ns, XElement content)
 			: base(ns + "OE")
 		{
+			this.ns = ns;
 			Add(content);
 		}
 
@@ -93,5 +96,11 @@ namespace River.OneMoreAddIn.Models
 			SetAttributeValue("style", style);
 			return this;
 		}
+
+		public void Add(string text)
+		{
+			Add(new XElement(ns + "T", new XCData(text)));
+
+        }
 	}
 }
