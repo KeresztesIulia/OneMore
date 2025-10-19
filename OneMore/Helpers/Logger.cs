@@ -465,6 +465,12 @@ namespace River.OneMoreAddIn
 			writeHeader = wh;
 		}
 
+		//SWH-Addition
+		public void WriteLineSWH(object message)
+		{
+			WriteLine("swh> " + message);
+		}
+
 
 		public void WriteTime(string message, bool keepRunning = false)
 		{

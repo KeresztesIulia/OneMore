@@ -184,6 +184,13 @@ namespace River.OneMoreAddIn
 
 
 		/// <summary>
+		/// SWH-Addition to easier spot my own logs
+		/// </summary>
+		/// <param name="message"></param>
+		void WriteLineSWH(object message);
+
+
+		/// <summary>
 		/// Stops the stopwatch and Writes a message along with the mm.ss timespan
 		/// since the stopwatch was started.
 		/// </summary>
