@@ -74,7 +74,7 @@ namespace River.OneMoreAddIn.Properties {
         ///	&lt;/xsd:annotation&gt;
         ///
         ///	&lt;!-- Valid root elements --&gt;
-        ///	&lt;xsd:element name=&quot;Notebooks&quot; ty [rest of string was truncated]&quot;;.
+        ///	&lt;xsd:element name=&quot;Notebooks&quot; type=&quot;Notebooks [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string _0336_OneNoteApplication_2013 {
             get {
@@ -1527,7 +1527,8 @@ namespace River.OneMoreAddIn.Properties {
         ///    &quot;ActiveBorder&quot;: &quot;#7F7F7F&quot;,
         ///    &quot;ActiveCaption&quot;: &quot;#C980EE&quot;,
         ///    &quot;ActiveCaptionText&quot;: &quot;#000000&quot;,
-        ///    &quot;AppWorkspace&quot;:  [rest of string was truncated]&quot;;.
+        ///    &quot;AppWorkspace&quot;: &quot;#1F1F1F&quot;,
+        ///    &quot;Bu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DarkTheme {
             get {
@@ -1549,7 +1550,7 @@ namespace River.OneMoreAddIn.Properties {
         ///&lt;Theme key=&quot;Orange&quot; name=&quot;Orange&quot; color=&quot;automatic&quot; setColor=&quot;False&quot; dark=&quot;False&quot; isPredefined=&quot;True&quot;&gt;
         ///  &lt;Style index=&quot;0&quot; name=&quot;Heading 1&quot; font=&quot;Calibri Light&quot; fontColor=&quot;Black&quot; fontSize=&quot;20.0&quot; spaceBefore=&quot;14.0&quot; spaceAfter=&quot;0.0&quot; applyColors=&quot;true&quot; styleType=&quot;Heading&quot; /&gt;
         ///  &lt;Style index=&quot;1&quot; name=&quot;Heading 2&quot; font=&quot;Calibri Light&quot; fontColor=&quot;#E67832&quot; fontSize=&quot;18.0&quot; spaceBefore=&quot;14.0&quot; spaceAfter=&quot;0.0&quot; applyColors=&quot;true&quot; styleType=&quot;Heading&quot; /&gt;
-        ///  &lt;Style index=&quot;2&quot; name=&quot;H [rest of string was truncated]&quot;;.
+        ///  &lt;Style index=&quot;2&quot; name=&quot;Headi [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DefaultStyles {
             get {
@@ -1580,7 +1581,8 @@ namespace River.OneMoreAddIn.Properties {
         ///    &quot;SecondRowStripe&quot;: &quot;255, 242, 204&quot;
         ///  },
         ///  {
-        ///    &quot;Name&quot;: &quot;Wh [rest of string was truncated]&quot;;.
+        ///    &quot;Name&quot;: &quot;White-Orange Rows&quot;,
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DefaultTableThemes {
             get {
@@ -2824,7 +2826,10 @@ namespace River.OneMoreAddIn.Properties {
         ///  {
         ///    &quot;glyph&quot;: &quot;✓&quot;,
         ///    &quot;resID&quot;: &quot;e_CheckMark&quot;,
-        ///    [rest of string was truncated]&quot;;.
+        ///    &quot;color&quot;: &quot;#00B050&quot;
+        ///  },
+        ///  {
+        ///    &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Emojis {
             get {
@@ -3721,7 +3726,7 @@ namespace River.OneMoreAddIn.Properties {
         /// <summary>
         ///   Looks up a localized string similar to CREATE TABLE IF NOT EXISTS hashtag_scanner (scannerID INTEGER PRIMARY KEY UNIQUE NOT NULL, version NUMERIC (12) UNIQUE NOT NULL, scanTime TEXT NOT NULL);
         ///CREATE TABLE IF NOT EXISTS hashtag (tag TEXT NOT NULL, moreID TEXT NOT NULL, objectID TEXT NOT NULL, snippet TEXT, documentOrder INTEGER DEFAULT (0), lastModified TEXT NOT NULL, PRIMARY KEY (tag, objectID), CONSTRAINT FK_moreID FOREIGN KEY (moreID) REFERENCES hashtag_page (moreID) ON DELETE CASCADE);
-        ///CREATE TABLE IF NOT EXISTS hashtag_page (moreID PRIMAR [rest of string was truncated]&quot;;.
+        ///CREATE TABLE IF NOT EXISTS hashtag_page (moreID PRIMARY  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HashtagsDB {
             get {
@@ -4230,7 +4235,8 @@ namespace River.OneMoreAddIn.Properties {
         ///    &quot;titleColor&quot;: &quot;#333333&quot;,
         ///    &quot;textColor&quot;: &quot;#333333&quot;
         ///  },
-        ///  &quot;wa [rest of string was truncated]&quot;;.
+        ///  &quot;warn&quot;: {
+        ///    &quot;shading&quot;: [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string InfoBoxThemes {
             get {
@@ -4679,7 +4685,8 @@ namespace River.OneMoreAddIn.Properties {
         ///    &quot;ActiveBorder&quot;: &quot;#B4B4B4&quot;,
         ///    &quot;ActiveCaption&quot;: &quot;#C980EE&quot;,
         ///    &quot;ActiveCaptionText&quot;: &quot;#000000&quot;,
-        ///    &quot;AppWorkspace&quot;: &quot;#ABABAB&quot;,        /// [rest of string was truncated]&quot;;.
+        ///    &quot;AppWorkspace&quot;: &quot;#ABABAB&quot;,
+        ///    &quot;ButtonFace&quot;:  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LightTheme {
             get {
@@ -7269,18 +7276,20 @@ namespace River.OneMoreAddIn.Properties {
         ///  xmlns=&quot;http://schemas.microsoft.com/office/2009/07/customui&quot;
         ///	onLoad=&quot;RibbonLoaded&quot;
         ///	loadImage=&quot;GetRibbonImage&quot;&gt;
-        ///  &lt;ribbon&gt;
-        ///    &lt;tabs/&gt;
-        ///  &lt;/ribbon&gt;
-        ///  &lt;contextMenus&gt;
-        ///    &lt;contextMenu idMso=&quot;ContextMenuFileAttachment&quot;&gt;
-        ///      &lt;button
-        ///        id=&quot;ctxCaptionAttachmentsButton&quot;
-        ///        imageMso=&quot;CaptionInsert&quot;
-        ///        getLabel=&quot;GetRibbonLabel&quot;
-        ///        getScreentip=&quot;GetRibbonScreentip&quot;
-        ///        onAction=&quot;CaptionAttachmentsCmd&quot;
-        ///        insertBeforeMs [rest of string was truncated]&quot;;.
+        ///	&lt;ribbon&gt;
+        ///		&lt;tabs/&gt;
+        ///	&lt;/ribbon&gt;
+        ///	&lt;contextMenus&gt;
+        ///		&lt;contextMenu idMso=&quot;ContextMenuFileAttachment&quot;&gt;
+        ///			&lt;button
+        ///			  id=&quot;ctxCaptionAttachmentsButton&quot;
+        ///			  imageMso=&quot;CaptionInsert&quot;
+        ///			  getLabel=&quot;GetRibbonLabel&quot;
+        ///			  getScreentip=&quot;GetRibbonScreentip&quot;
+        ///			  onAction=&quot;CaptionAttachmentsCmd&quot;
+        ///			  insertBeforeMso=&quot;FilePrintoutInsert&quot;/&gt;
+        ///		&lt;/contextMenu&gt;
+        ///		 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Ribbon {
             get {
@@ -7458,7 +7467,7 @@ namespace River.OneMoreAddIn.Properties {
         ///      getItemCount=&quot;GetStyleGalleryItemCount&quot;
         ///      getItemID=&quot;GetStyleGalleryItemId&quot;
         ///      getItemImage=&quot;GetStyleGalleryItemImage&quot;
-        ///      getItemScreentip=&quot;GetStyl [rest of string was truncated]&quot;;.
+        ///      getItemScreentip=&quot;GetStyleGalleryItem [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string RibbonTabHome {
             get {
@@ -7475,14 +7484,16 @@ namespace River.OneMoreAddIn.Properties {
         ///  insertAfterMso=&quot;TabView&quot;
         ///  keytip=&quot;M&quot;&gt;
         ///
-        ///  &lt;group id=&quot;ribOneMoreBasicsGroup&quot; getLabel=&quot;GetRibbonLabel&quot; getImage=&quot;GetOneMoreRibbonImage&quot;&gt;
-        ///    &lt;button
-        ///      id=&quot;ribCommandPaletteButton&quot;
-        ///      imageMso=&quot;FormControlEditBox&quot;
-        ///      getLabel=&quot;GetRibbonLabel&quot;
-        ///      getScreentip=&quot;GetRibbonScreentip&quot;
-        ///      onAction=&quot;CommandPaletteCmd&quot;
-        ///      size=&quot;lar [rest of string was truncated]&quot;;.
+        ///	&lt;group id=&quot;ribOneMoreBasicsGroup&quot; getLabel=&quot;GetRibbonLabel&quot; getImage=&quot;GetOneMoreRibbonImage&quot;&gt;
+        ///		&lt;button
+        ///		  id=&quot;ribCommandPaletteButton&quot;
+        ///		  imageMso=&quot;FormControlEditBox&quot;
+        ///		  getLabel=&quot;GetRibbonLabel&quot;
+        ///		  getScreentip=&quot;GetRibbonScreentip&quot;
+        ///		  onAction=&quot;CommandPaletteCmd&quot;
+        ///		  size=&quot;large&quot;
+        ///		  keytip=&quot;P&quot;/&gt;
+        ///		&lt;button [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string RibbonTabOneMore {
             get {
@@ -10704,6 +10715,78 @@ namespace River.OneMoreAddIn.Properties {
         internal static string ribStylizeImagesButton_Screentip {
             get {
                 return ResourceManager.GetString("ribStylizeImagesButton_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Addition note.
+        /// </summary>
+        internal static string ribSWHAddAdditionNoteButton_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddAdditionNoteButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editing note.
+        /// </summary>
+        internal static string ribSWHAddEditingNoteButton_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddEditingNoteButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overall editing note.
+        /// </summary>
+        internal static string ribSWHAddGeneralEditingNoteButton_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddGeneralEditingNoteButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inline addition note.
+        /// </summary>
+        internal static string ribSWHAddInlineAdditionNoteButton_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddInlineAdditionNoteButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Note.
+        /// </summary>
+        internal static string ribSWHAddNoteMenu_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddNoteMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add a sidenote or editing note to a part of the chapter..
+        /// </summary>
+        internal static string ribSWHAddNoteMenu_Screentip {
+            get {
+                return ResourceManager.GetString("ribSWHAddNoteMenu_Screentip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sidenote.
+        /// </summary>
+        internal static string ribSWHAddSidenoteButton_Label {
+            get {
+                return ResourceManager.GetString("ribSWHAddSidenoteButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storywriting.
+        /// </summary>
+        internal static string ribSWHStorywritingMenu_Label {
+            get {
+                return ResourceManager.GetString("ribSWHStorywritingMenu_Label", resourceCulture);
             }
         }
         
