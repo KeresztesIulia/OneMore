@@ -49,8 +49,27 @@ namespace River.OneMoreAddIn
 		public async Task AddFormulaCmd(IRibbonControl control)
 			=> await factory.Run<AddFormulaCommand>();
 
+        #region Add Note
 
-		[Command("ribAddTagBankButton_Label", Keys.None, "ribSearchMenu")]
+        [Command("ribSWHAddNoteButton_Label", Keys.None)]
+		public async Task SWHAddNoteCmd(IRibbonControl control)
+			=> await factory.Run<SWHAddNoteCommand>(SWHAddNoteCommand.NoteType.Sidenote, false);
+
+        public async Task SWHAddEditingNoteCmd(IRibbonControl control)
+            => await factory.Run<SWHAddNoteCommand>(SWHAddNoteCommand.NoteType.EditingNote, false);
+
+        public async Task SWHAddOverallEditingNoteCmd(IRibbonControl control)
+            => await factory.Run<SWHAddNoteCommand>(SWHAddNoteCommand.NoteType.OverallEditingNote, false);
+
+        public async Task SWHAddAdditionNoteCmd(IRibbonControl control)
+            => await factory.Run<SWHAddNoteCommand>(SWHAddNoteCommand.NoteType.AdditionNote, false);
+
+        public async Task SWHAddInLineAdditionNoteCmd(IRibbonControl control)
+            => await factory.Run<SWHAddNoteCommand>(SWHAddNoteCommand.NoteType.InLineAdditionNote, false);
+        #endregion
+
+
+        [Command("ribAddTagBankButton_Label", Keys.None, "ribSearchMenu")]
 		public async Task AddTagBankCmd(IRibbonControl control)
 			=> await factory.Run<TagBankCommand>(true);
 
