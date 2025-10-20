@@ -38,6 +38,32 @@ namespace River.OneMoreAddIn.Models
                 this.ns = ns;
             }
 
+            public OEChildren(XElement content) :
+               this(PageNamespace.Value, content)
+            {
+
+
+            }
+
+            public OEChildren(XNamespace ns, XElement content) :
+               this(ns)
+            {
+                if (content.Name.LocalName == "OEChildren")
+                {
+                    if (content.HasElements)
+                    {
+
+                        Add(content.Elements());
+                    }
+                }
+                else
+                {
+                    Add(content);
+                }
+            }
+
+            
+
             protected Paragraph AddContent(object content, int index = -1, bool isText = true)
             {
                 try
@@ -120,6 +146,8 @@ namespace River.OneMoreAddIn.Models
             this.ns = ns;
             if (oeChildren == null) oeChildren = new OEChildren(ns);
             Add(oeChildren);
+            
+            
         }
 
         /// <summary>
@@ -147,8 +175,19 @@ namespace River.OneMoreAddIn.Models
             {
                 if (content.HasElements)
                 {
-                    Add(content.Elements());
+                    var oec = content.Element(ns + "OEChildren");
+                    if (oec != null)
+                    {
+                        if (oec.HasElements) oeChildren.Add(oec.Elements());
+                        if (oec.HasAttributes) oec.Attributes().ForEach(a => oeChildren.SetAttributeValue(a.Name, a.Value));
+                    }
+                    AddFirst(content.Elements().Where(e => e.Name.LocalName != "OEChildren"));
                 }
+                if (content.HasAttributes)
+                {
+                    content.Attributes().ForEach(a => SetAttributeValue(a.Name, a.Value));
+                }
+                
             }
             else
             {
@@ -296,7 +335,7 @@ namespace River.OneMoreAddIn.Models
             {
                 position = new XElement(ns + "Position", new XAttribute("x", $"{x}.0"));
                 position.Add(new XAttribute("y", $"{y}.0"));
-                
+
 
                 AddFirst(position);
             }
@@ -336,6 +375,8 @@ namespace River.OneMoreAddIn.Models
         {
             outline.GetPosition(out int compX, out int compY);
             outline.GetSize(out int width, out int height);
+
+            //logger.WriteLineSWH($"\nchecked outline:  {{ x: {compX}, y: {compY}, width: {width}, height: {height}}}\nnew outline: {{ x: {x}, y: {y} }}");
 
             return (compX <= x && x <= compX + width) && (compY <= y && y <= compY + height);
         }
